@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     post '/users', to: 'users#create'
     get '/users/:id/edit', to: 'users#edit'
     patch '/users/:id', to: 'users#update'
-    #deleteだと「No route matches」エラー→「get」で解決、何故？
-    get '/users/:id', to: 'users#destroy'
+    delete '/users/:id', to: 'users#destroy'
 end
 
